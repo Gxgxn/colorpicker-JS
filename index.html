@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+        body {
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='563' preserveAspectRatio='none' viewBox='0 0 1440 563'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1237%26quot%3b)' fill='none'%3e%3crect width='1440' height='563' x='0' y='0' fill='rgba(25%2c 42%2c 86%2c 1)'%3e%3c/rect%3e%3cpath d='M30.059787488618895 131.70175318671613L120.9097928167609 63.37701337407589 30.130979943267967 22.959681864541068z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M435.5242857903339 367.64352277631355L291.84350450427536 395.43015913499477 374.07324698470757 493.42775015414657z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M586.0010007307438 509.2140162165341L707.1044624445346 460.2850416447387 537.0720261589485 388.11055450274324z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M580.013%2c357.803C604.448%2c356.645%2c622.017%2c336.697%2c633.557%2c315.128C644.326%2c295%2c646.808%2c271.928%2c636.982%2c251.323C625.479%2c227.199%2c606.735%2c203.299%2c580.013%2c202.839C552.773%2c202.37%2c532.41%2c225.288%2c519.544%2c249.302C507.496%2c271.789%2c504.469%2c298.375%2c516.888%2c320.659C529.626%2c343.516%2c553.875%2c359.042%2c580.013%2c357.803' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M735.258%2c408.811C770.804%2c409.108%2c806.568%2c394.658%2c823.902%2c363.624C840.884%2c333.219%2c832.943%2c296.246%2c814.701%2c266.58C797.417%2c238.471%2c768.255%2c219.262%2c735.258%2c219.467C702.598%2c219.67%2c674.383%2c239.593%2c657.508%2c267.557C639.977%2c296.608%2c632.783%2c332.437%2c649.145%2c362.163C666.017%2c392.815%2c700.27%2c408.519%2c735.258%2c408.811' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M173.11534827839935 136.88140006871834L166.58869598427137 259.1870290567364 262.8194063735659 212.2521755790341z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M722.5554950319852 63.87971488801328L697.8264255644035 144.76485650872917 778.7115671851193 169.4939259763109 803.4406366527011 88.608784355595z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M203.47044921098117 451.00085174736785L316.2953670897811 422.8704403017008 288.16495564411406 310.04552242290083 175.3400377653141 338.1759338685679z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1237'%3e%3crect width='1440' height='563' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+        }
+        .container {
+          background: rgba(0, 0, 0, 0.28);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(16.3px);
+          -webkit-backdrop-filter: blur(16.3px);
+        }
+        .card {
+          background: white;
+          transition: transform ease-in-out 150ms;
+          min-height: 300px;
+          cursor: pointer;
+        }
+        .card:hover {
+          transform: scale(105%);
+        }
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Color Picker | Vanilla JS</title>
+  </head>
+  <body>
+    <header class="container mx-auto py-3">
+      <div class="flex justify-between items-center mx-3">
+        <h1 class="text-4xl font-semibold text-cyan-200">
+          Color Palette Generator
+        </h1>
+        <button
+          class="btn flex items-center text-2xl text-cyan-100 p-3 group rounded-lg bg-slate-800"
+        >
+          Generate New<span class="material-icons group-hover:animate-spin">
+            refresh
+          </span>
+        </button>
+      </div>
+    </header>
+    <div class="container mx-auto py-5 space-y-20">
+      <section class="mx-4">
+        <h2 class="text-center text-3xl md:text-5xl text-cyan-100">
+          Palette-1
+        </h2>
+        <div
+          class="cards grid grid-cols-2 gap-10 md:gap-16 justify-center min-h-[200px] md:min-h-[300px] my-8 md:grid-cols-5"
+        >
+          <div class="card rounded-lg"></div>
+          <div class="card rounded-lg"></div>
+          <div class="card rounded-lg"></div>
+          <div class="card rounded-lg"></div>
+          <div class="card rounded-lg"></div>
+        </div>
+      </section>
+      <section class="mx-4">
+        <h1 class="text-center text-3xl md:text-5xl text-cyan-100">
+          Palette-2
+        </h1>
+        <div
+          class="cards grid grid-cols-2 gap-10 md:gap-16 justify-center min-h-[200px] md:min-h-[300px] my-8 md:grid-cols-5"
+        >
+          <div class="card rounded-lg"></div>
+          <div class="card rounded-lg"></div>
+          <div class="card rounded-lg"></div>
+          <div class="card rounded-lg"></div>
+          <div class="card rounded-lg"></div>
+        </div>
+      </section>
+      <section class="mx-4">
+        <h1 class="text-center text-3xl md:text-5xl text-cyan-100">
+          Palette-3
+        </h1>
+        <div
+          class="cards grid grid-cols-2 gap-10 md:gap-16 justify-center min-h-[200px] md:min-h-[300px] my-8 md:grid-cols-5"
+        >
+          <div class="card rounded-lg"></div>
+          <div class="card rounded-lg"></div>
+          <div class="card rounded-lg"></div>
+          <div class="card rounded-lg"></div>
+          <div class="card rounded-lg"></div>
+        </div>
+      </section>
+      <section class="mx-4">
+        <h1 class="text-center text-3xl md:text-5xl text-cyan-100">
+          Palette-4
+        </h1>
+        <div
+          class="cards grid grid-cols-2 gap-10 md:gap-16 justify-center min-h-[200px] md:min-h-[300px] my-8 md:grid-cols-5"
+        >
+          <div class="card rounded-lg"></div>
+          <div class="card rounded-lg"></div>
+          <div class="card rounded-lg"></div>
+          <div class="card rounded-lg"></div>
+          <div class="card rounded-lg"></div>
+        </div>
+      </section>
+      <section class="mx-4">
+        <h1 class="text-center text-3xl md:text-5xl text-cyan-100">
+          Palette-5
+        </h1>
+        <div
+          class="cards grid grid-cols-2 gap-10 md:gap-16 justify-center min-h-[200px] md:min-h-[300px] my-8 md:grid-cols-5"
+        >
+          <div class="card rounded-lg"></div>
+          <div class="card rounded-lg"></div>
+          <div class="card rounded-lg"></div>
+          <div class="card rounded-lg"></div>
+          <div class="card rounded-lg"></div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
