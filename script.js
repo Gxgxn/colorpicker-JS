@@ -197,3 +197,40 @@ const palette = [
   ["#8D7966", "#A8A39D", "#D8C8B8", "#E2DDD9", "#F8F1E9"],
   ["#F2E8C4", "#98D9B6", "#3EC9A7", "#2B879E", "#616668"],
 ];
+
+const cardsContainer = document.querySelectorAll(".cards");
+const card = document.querySelectorAll(".card");
+
+function giveColor() {
+  cardsContainer.forEach((cardsCollection) => {
+    let i = 0;
+    for (let card of cardsCollection.children) {
+      let randomPallete = Math.floor(Math.random() * palette.length);
+      card.style.backgroundColor = `${palette[randomPallete][i]}`;
+      i++;
+    }
+  });
+}
+
+window.onload = giveColor();
+
+card.forEach((element) => {
+  element.addEventListener("click", (e) => {
+    console.log(colorToHex(e.target.style.backgroundColor));
+    navigator.clipboard.writeText(e.target.style.backgroundColor);
+  });
+});
+
+document.querySelector("#btn").addEventListener("click", () => {
+  giveColor();
+});
+
+function colorToHex(color) {
+  let digits = /(.*?)rgb\((\d+), (\d+), (\d+)\)/.exec(color);
+
+  let r = parseInt(digits[2]);
+  let g = parseInt(digits[3]);
+  let b = parseInt(digits[4]);
+
+  return `# ${r.toString(16)}${g.toString(16)}${b.toString(16)}`;
+}
