@@ -197,7 +197,12 @@ const palette = [
   ["#8D7966", "#A8A39D", "#D8C8B8", "#E2DDD9", "#F8F1E9"],
   ["#F2E8C4", "#98D9B6", "#3EC9A7", "#2B879E", "#616668"],
 ];
-
+const alert = `<div
+class="rounded border border-sky-900/10 bg-sky-50 p-2 text-sky-700 absolute w-10/12  mx-auto top-0 left-1/2 -translate-x-1/2 -translate-y-1/2"
+role="alert"
+>
+<strong class="text-sm font-medium"> ✅ Copied to Clipboard </strong>
+</div>`;
 const cardsContainer = document.querySelectorAll(".cards");
 const card = document.querySelectorAll(".card");
 
@@ -217,7 +222,15 @@ window.onload = giveColor();
 card.forEach((element) => {
   element.addEventListener("click", (e) => {
     console.log(colorToHex(e.target.style.backgroundColor));
-    navigator.clipboard.writeText(e.target.style.backgroundColor);
+    navigator.clipboard.writeText(colorToHex(e.target.style.backgroundColor));
+    e.target.innerHTML =
+      `<h1 class="text-sm font-medium">${colorToHex(
+        e.target.style.backgroundColor
+      )}<h1/>` + alert;
+
+    setTimeout(() => {
+      e.target.innerHTML = "";
+    }, 700);
   });
 });
 
